@@ -48,12 +48,14 @@
             this.btnborrar = new System.Windows.Forms.Button();
             this.Btncero = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
+            this.lblhistorial = new System.Windows.Forms.Label();
+            this.btnmultiplicacion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cajaresultado
             // 
             this.cajaresultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajaresultado.Location = new System.Drawing.Point(12, 48);
+            this.cajaresultado.Location = new System.Drawing.Point(12, 59);
             this.cajaresultado.Multiline = true;
             this.cajaresultado.Name = "cajaresultado";
             this.cajaresultado.ReadOnly = true;
@@ -179,6 +181,7 @@
             this.btnigual.TabIndex = 12;
             this.btnigual.Text = "=";
             this.btnigual.UseVisualStyleBackColor = true;
+            this.btnigual.Click += new System.EventHandler(this.btnigual_Click);
             // 
             // btnpunto
             // 
@@ -189,6 +192,7 @@
             this.btnpunto.TabIndex = 13;
             this.btnpunto.Text = ",";
             this.btnpunto.UseVisualStyleBackColor = true;
+            this.btnpunto.Click += new System.EventHandler(this.btnpunto_Click);
             // 
             // btnSuma
             // 
@@ -199,6 +203,7 @@
             this.btnSuma.TabIndex = 14;
             this.btnSuma.Text = "+";
             this.btnSuma.UseVisualStyleBackColor = true;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
             // 
             // btnresta
             // 
@@ -209,6 +214,7 @@
             this.btnresta.TabIndex = 15;
             this.btnresta.Text = "-";
             this.btnresta.UseVisualStyleBackColor = true;
+            this.btnresta.Click += new System.EventHandler(this.btnresta_Click);
             // 
             // btndivision
             // 
@@ -219,6 +225,7 @@
             this.btndivision.TabIndex = 16;
             this.btndivision.Text = "/";
             this.btndivision.UseVisualStyleBackColor = true;
+            this.btndivision.Click += new System.EventHandler(this.btndivision_Click);
             // 
             // btnmodulo
             // 
@@ -229,16 +236,18 @@
             this.btnmodulo.TabIndex = 17;
             this.btnmodulo.Text = "%";
             this.btnmodulo.UseVisualStyleBackColor = true;
+            this.btnmodulo.Click += new System.EventHandler(this.btnmodulo_Click);
             // 
             // btnborrar
             // 
             this.btnborrar.Font = new System.Drawing.Font("Maiandra GD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnborrar.Location = new System.Drawing.Point(297, 189);
+            this.btnborrar.Location = new System.Drawing.Point(297, 259);
             this.btnborrar.Name = "btnborrar";
-            this.btnborrar.Size = new System.Drawing.Size(106, 179);
+            this.btnborrar.Size = new System.Drawing.Size(106, 109);
             this.btnborrar.TabIndex = 18;
             this.btnborrar.Text = "Borrar";
             this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click);
             // 
             // Btncero
             // 
@@ -260,12 +269,34 @@
             this.btnlimpiar.TabIndex = 20;
             this.btnlimpiar.Text = "C";
             this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
+            // lblhistorial
+            // 
+            this.lblhistorial.AutoSize = true;
+            this.lblhistorial.Location = new System.Drawing.Point(30, 37);
+            this.lblhistorial.Name = "lblhistorial";
+            this.lblhistorial.Size = new System.Drawing.Size(0, 13);
+            this.lblhistorial.TabIndex = 21;
+            // 
+            // btnmultiplicacion
+            // 
+            this.btnmultiplicacion.Font = new System.Drawing.Font("Matura MT Script Capitals", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmultiplicacion.Location = new System.Drawing.Point(297, 195);
+            this.btnmultiplicacion.Name = "btnmultiplicacion";
+            this.btnmultiplicacion.Size = new System.Drawing.Size(106, 48);
+            this.btnmultiplicacion.TabIndex = 22;
+            this.btnmultiplicacion.Text = "*";
+            this.btnmultiplicacion.UseVisualStyleBackColor = true;
+            this.btnmultiplicacion.Click += new System.EventHandler(this.btnmultiplicacion_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 387);
+            this.Controls.Add(this.btnmultiplicacion);
+            this.Controls.Add(this.lblhistorial);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.Btncero);
             this.Controls.Add(this.btnborrar);
@@ -288,6 +319,7 @@
             this.Controls.Add(this.cajaresultado);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,6 +347,8 @@
         private System.Windows.Forms.Button btnborrar;
         private System.Windows.Forms.Button Btncero;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Label lblhistorial;
+        private System.Windows.Forms.Button btnmultiplicacion;
     }
 }
 
